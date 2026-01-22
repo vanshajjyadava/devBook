@@ -16,3 +16,9 @@ DAY 2:
 - Create a git ignore file and add node_modules in it
 - Create a remote repo on github
 - Push all code to remote origin
+- Play with routes and route extensions eg. "/hello/1", "/", etc.
+- Imp. note => THE ORDER OF THE ROUTES AND ROUTES HANDLERS MATTER A LOT.
+- Explore routing and use of '?', '*', '()', '+' in the routes
+- Use of REGEX in routes '/a/', '/.*fly$/'
+- Reading the query params in the routes
+- Reading the dynamic routes
