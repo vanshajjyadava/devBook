@@ -2,33 +2,20 @@ const express = require("express"); // getting express
 
 const app = express(); // instance of express
 
-app.get("/user", (req, res) => {
-  res.send({ firstName: "Vansh", lastName: "Yadav" });
-});
-
-app.post("/user", (req, res) => {
-  // logic for sign up
-  res.send("User added successfully.");
-});
-
-app.put("/user", (req, res) => {
-  // logic to update the entire user
-  res.send("User updated.");
-});
-
-app.patch("/user", (req, res) => {
-  // logic to update partial data
-  res.send("User patched.");
-});
-
-app.delete("/user", (req, res) => {
-  // logic to delete user
-  res.send("User deleted.");
+// method-agnostic middleware
+app.use("/", (req, res, next) => {
+  console.log("I am a method-agnostic middleware.");
+  next();
 });
 
 // request handlers
-app.use("/test", (req, res) => {
-  res.send("Hi, Your server is active on port no. 7777");
+app.get("/user", (req, res, next) => {
+  res.send("Route handler 1.");
+  //next();
+});
+
+app.get("/user/1", (req, res, next) => {
+  res.send("Route handler 2.");
 });
 
 // listen on port 7777

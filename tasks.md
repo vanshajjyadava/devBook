@@ -22,3 +22,10 @@ DAY 2:
 - Use of REGEX in routes '/a/', '/.*fly$/'
 - Reading the query params in the routes
 - Reading the dynamic routes
+
+DAY 3:
+- Use Multiple route handlers
+- Learn about next()
+- next() and errors along with res.send()
+- app.use("/route", [rh1, rh2], rh3, rh4, rh5) 
+- REMEMBER: app.use is a "method-agnostic middleware"
