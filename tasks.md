@@ -1,5 +1,3 @@
-DAY 1:
-
 - Create a repository
 - Intialize the repo
 - Learn about node_modules, package.json and package-lock.json
@@ -12,8 +10,6 @@ DAY 1:
 - What is the use of "-g" while installing from npm ?
 - Install nodemon globally (-g) and update the scripts inside package.json
 
-DAY 2:
-
 - Initialize git
 - Create a git ignore file and add node_modules in it
 - Create a remote repo on github
@@ -24,8 +20,6 @@ DAY 2:
 - Use of REGEX in routes '/a/', '/.\*fly$/'
 - Reading the query params in the routes
 - Reading the dynamic routes
-
-DAY 3:
 
 - Use Multiple route handlers
 - Learn about next()
@@ -39,3 +33,8 @@ DAY 3:
 - Write a dummy auth middleware for admin
 - Write a dummy auth middleware for user routes, except for user/login
 - Error handling using app.use("/", (err, req, res, next) => {});
+
+- Create a free cluster on MongoDB off. website (Mongo ATLAS)
+- Install mongoose (Object Data Modeling) ODM library
+- Connect your application to the database "connection-url/databaseName"
+- Call the connectDB() and connect to database before starting application on port no. 7777
