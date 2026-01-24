@@ -38,3 +38,4 @@
 - Install mongoose (Object Data Modeling) ODM library
 - Connect your application to the database "connection-url/databaseName"
 - Call the connectDB() and connect to database before starting application on port no. 7777
+- Create a userSchema and User model
