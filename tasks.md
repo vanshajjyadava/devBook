@@ -39,3 +39,6 @@
 - Connect your application to the database "connection-url/databaseName"
 - Call the connectDB() and connect to database before starting application on port no. 7777
 - Create a userSchema and User model
+- Create POST /signup API to add data to the database
+- Push some documents using signup API from postman
+- Handle error while working with database using try / catch

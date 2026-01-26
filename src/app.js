@@ -7,6 +7,7 @@ const User = require("./models/user");
 
 // POST API - signup
 app.post("/signup", async (req, res) => {
+  // Creating a new "Instance of the User model"
   const user = new User({
     firstName: "Vansh",
     lastName: "Yadav",
