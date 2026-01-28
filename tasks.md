@@ -42,3 +42,28 @@
 - Create POST /signup API to add data to the database
 - Push some documents using signup API from postman
 - Handle error while working with database using try / catch
+
+- Difference between json and js object
+- Add express.json() middleware to the app.js
+- Make your sign-up API dynamic => It should recieve data from the API using (req.body)
+- Create API, GET user by email(/user)
+- Create API, GET all the users(/feed)
+- Create API, GET user by id
+
+# Git push -m "added GET API for Single user and for feed"
+
+- Explore schematype options from the documentation
+- Add required, unique, lowercase, min, minLength, trim to userSchema
+- Add default in any schema property
+- Create a custom validate function for gender
+- Improve the DB schema by adding validations
+- Add timestamps to the userSchema
+
+# Git push -m "added validations for userSchema"
+
+- Install VALIDATOR - A library of string validators and sanitizers.
+- Add validator for various fields
+
+# Git push -m "used validator library for validation of userSchema"
+
+- NEVER TRUST req.body
