@@ -1,21 +1,14 @@
 const express = require("express"); // getting express
 const app = express(); // instance of express
-
 const connectDB = require("./config/database");
-
 const User = require("./models/user");
+
+app.use(express.json()); // converts raw JSON text data in the request body into a JavaScript object
 
 // POST API - signup
 app.post("/signup", async (req, res) => {
-  // Creating a new "Instance of the User model"
-  const user = new User({
-    firstName: "Vansh",
-    lastName: "Yadav",
-    email: "vanshyadav@gmail.com",
-    password: "Vansh@123",
-    age: 22,
-    gender: "Male",
-  });
+  // creating a new "Instance of the User model"
+  const user = new User(req.body);
 
   try {
     await user.save();
