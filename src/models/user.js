@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const validator = require("validator");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema(
   {
@@ -73,5 +75,26 @@ const userSchema = new Schema(
   },
   { timestamps: true },
 );
+
+// schema methods - NOTE: "NEVER USE ARROW FUNCTIONS WHILE CREATING SCHEMA METHODS AS 'THIS' WORKS VERY DIFFERENT IN CASE OF ARROW FUNCTIONS"
+
+// 1. Generating JWT token for user
+userSchema.methods.getJWT = async function () {
+  const user = this;
+
+  const token = await jwt.sign({ _id: this._id }, "VANSHYADAV", {
+    expiresIn: "1h",
+  });
+  return token;
+};
+
+// 2. Validating password
+userSchema.methods.validatePassword = async function (passwordEnteredByUser) {
+  const user = this;
+  const passwordHash = this.password;
+
+  const isPasswordValid = bcrypt.compare(passwordEnteredByUser, passwordHash);
+  return isPasswordValid;
+};
 
 module.exports = mongoose.model("User", userSchema);

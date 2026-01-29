@@ -66,3 +66,12 @@
 - Create login API
 - Compare password using bcrypt.compare
 - Throw errors if email or password is not valid
+
+- Install cookie-parser
+- Create GET /profile API and check if you get the cookies
+- Install jsonwebtoken
+- Create jwt in after successful login and use it in other API verification
+- Create a userAuth middleware 
+- Use userAuth middleware in order to validate a user while accessing GET /profile API
+- Create userSchema.method.getJWT() to generate jwt tokens
+- Create userSchema.method.validatePassword to validate password entered by user
