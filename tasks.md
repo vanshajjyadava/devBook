@@ -50,20 +50,19 @@
 - Create API, GET all the users(/feed)
 - Create API, GET user by id
 
-# Git push -m "added GET API for Single user and for feed"
-
 - Explore schematype options from the documentation
 - Add required, unique, lowercase, min, minLength, trim to userSchema
 - Add default in any schema property
 - Create a custom validate function for gender
 - Improve the DB schema by adding validations
 - Add timestamps to the userSchema
-
-# Git push -m "added validations for userSchema"
-
-- Install VALIDATOR - A library of string validators and sanitizers.
+- Install VALIDATOR - A library of string validators and sanitizers
 - Add validator for various fields
-
-# Git push -m "used validator library for validation of userSchema"
-
 - NEVER TRUST req.body
+
+- Validate sign-up data in req
+- Install bcrypt package
+- Create password hash using brcypt.hash & save hash password in db
+- Create login API
+- Compare password using bcrypt.compare
+- Throw errors if email or password is not valid
