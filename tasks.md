@@ -71,7 +71,16 @@
 - Create GET /profile API and check if you get the cookies
 - Install jsonwebtoken
 - Create jwt in after successful login and use it in other API verification
-- Create a userAuth middleware 
+- Create a userAuth middleware
 - Use userAuth middleware in order to validate a user while accessing GET /profile API
 - Create userSchema.method.getJWT() to generate jwt tokens
 - Create userSchema.method.validatePassword to validate password entered by user
+
+- Create a .md for all the required APIs
+- Use express.Router()
+- Create authRouter, profileRouter and requestRouter
+- Import these routers in app.js
+- Create POST /logout API
+- Create PATCH /profile/edit API 
+- Create PATCH /profile/password API for changing existing password
+

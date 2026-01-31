@@ -12,6 +12,26 @@ const validateSignUpData = (req) => {
   }
 };
 
+const validateEditProfileKeys = (req) => {
+  const allowedKeys = [
+    "firstName",
+    "lastName",
+    "age",
+    "gender",
+    "photoUrl",
+    "about",
+    "skills",
+  ];
+
+  // used "every" as we need a boolean output
+  const isEditAllowed = Object.keys(req.body).every((key) =>
+    allowedKeys.includes(key),
+  );
+
+  return isEditAllowed;
+};
+
 module.exports = {
   validateSignUpData,
+  validateEditProfileKeys,
 };
