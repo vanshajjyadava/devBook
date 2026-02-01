@@ -42,6 +42,7 @@ profileRouter.patch("/profile/edit", userAuth, async (req, res) => {
   }
 });
 
+// PATCH API - change profile password
 profileRouter.patch("/profile/password", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user; // from userAuth
