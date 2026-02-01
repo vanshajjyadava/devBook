@@ -22,7 +22,8 @@ const userSchema = new Schema(
     emailId: {
       type: String,
       required: true,
-      unique: true,
+      unique: true, // 'unique' auto-creates index
+      // index: true,
       lowercase: true,
       trim: true,
       validate(value) {
