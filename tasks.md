@@ -84,3 +84,12 @@
 - Create PATCH /profile/edit API 
 - Create PATCH /profile/password API for changing existing password
 
+- Create connectRequestSchema and it's model
+- Create POST /sendConnectionRequest API 
+- Do proper validation of data before putting it in the db
+- Think about all the corner cases
+- Learn about $or / $and and other logical query opertors in mongoDB
+- Used Schema.pre("save") function()
+- Implement and learn about indexing and compound indexing 
+- What are the advantages and disadvantages of adding indexes in mongoDB
+## git commit -m "added POST /sendConnectionRequest API"
