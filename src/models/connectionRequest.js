@@ -4,10 +4,12 @@ const connectionRequestSchema = new mongoose.Schema(
   {
     fromUserId: {
       type: mongoose.Schema.Types.ObjectId,
+      ref: "User", // reference to the "User" collection
       required: true,
     },
     toUserId: {
       type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
       required: true,
     },
     status: {
@@ -27,12 +29,9 @@ const connectionRequestSchema = new mongoose.Schema(
 connectionRequestSchema.pre("save", function (next) {
   const connectionRequest = this;
 
-  // Check if fromUserId is same as toUserId
-  if (connectionRequest.fromUserId.equals(connectionRequest.toUserId)) {
+  if (this.fromUserId.equals(this.toUserId)) {
     throw new Error("Cannot send connection request to yourself !!");
   }
-
-  next();
 });
 
 // compound INDEXING:

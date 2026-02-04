@@ -81,15 +81,25 @@
 - Create authRouter, profileRouter and requestRouter
 - Import these routers in app.js
 - Create POST /logout API
-- Create PATCH /profile/edit API 
+- Create PATCH /profile/edit API
 - Create PATCH /profile/password API for changing existing password
 
 - Create connectRequestSchema and it's model
-- Create POST /sendConnectionRequest API 
+- Create POST /sendConnectionRequest API
 - Do proper validation of data before putting it in the db
 - Think about all the corner cases
 - Learn about $or / $and and other logical query opertors in mongoDB
 - Used Schema.pre("save") function()
-- Implement and learn about indexing and compound indexing 
+- Implement and learn about indexing and compound indexing
 - What are the advantages and disadvantages of adding indexes in mongoDB
-## git commit -m "added POST /sendConnectionRequest API"
+
+- Create POST /review/ConnectionRequest API - 'accepted or rejected'
+- Learn about ref and populate for linking two collections in a database (mongoDB)
+- Create GET /user/requests/recieved API - shows all the connection requests recieved
+- Create GET /user/connections API - shows all the connections of a user
+- Used map() and toString() methods
+- Create GET /feed - shows users their respective feeds
+- Explore query operators {$or, $and, $ne, $nin, etc}
+- Added pagination with queries as "page" and "limit"
+
+
