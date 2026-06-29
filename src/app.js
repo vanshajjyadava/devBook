@@ -2,7 +2,9 @@ const express = require("express"); // getting express
 const app = express(); // instance of express
 const connectDB = require("./config/database");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json()); // converts raw JSON text data in the request body into a JavaScript object
 app.use(cookieParser()); // parses cookies to readable text
 
