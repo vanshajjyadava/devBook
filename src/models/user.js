@@ -49,7 +49,7 @@ const userSchema = new Schema(
     },
     gender: {
       type: String,
-      // required: true,
+      required: true,
       lowercase: true,
       // Custom Validation Function.
       validate(value) {
@@ -60,8 +60,7 @@ const userSchema = new Schema(
     },
     photoUrl: {
       type: String,
-      default:
-        "https://www.pnrao.com/wp-content/uploads/2023/06/dummy-user-male.jpg",
+      default: "https://cdn-icons-png.flaticon.com/512/6780/6780628.png",
       validate(value) {
         if (!validator.isURL(value)) throw new Error("Invalid image URL !");
       },
