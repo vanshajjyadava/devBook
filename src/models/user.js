@@ -49,7 +49,7 @@ const userSchema = new Schema(
     },
     gender: {
       type: String,
-      required: true,
+      //required: true,
       lowercase: true,
       // Custom Validation Function.
       validate(value) {
